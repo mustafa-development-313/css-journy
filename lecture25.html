@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: blue;
+        }
+        .circles{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            position: relative;
+            isolation: auto;
+        }
+        .circle{
+            position: absolute;
+            width: 150px;
+            border-radius: 50%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            mix-blend-mode: difference;
+        }
+        .circles .circle:nth-child(1){
+            background: red;
+            left: 45%;
+        }
+            .circles .circle:nth-child(2){
+            background: green;
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="circles">
+        <div class="circle">Red</div>
+        <div class="circle">Blue</div>
+    </div>
+</body>
+</html>

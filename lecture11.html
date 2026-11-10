@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flipper{
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+        .card-container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+
+        }
+        .flipper:hover .card-container{
+            transform: rotateY(180deg);
+        }
+        .card{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+        }
+        .front{
+            background-color: green;
+        }
+        .back{
+            background-color: red;
+            transform: rotateY(180deg);
+        }
+  
+    </style>
+</head>
+<body>
+    <!-- prespective,transform-origon,backface-visibility,transform-style -->
+
+<div class="flipper">
+    <div class="card-container">
+        <div class="card front">Front</div>
+        <div class="card back">Back</div>
+    </div>
+</div>
+
+</body>
+</html>
